@@ -144,3 +144,6 @@ cython_debug/
 
 # flask env 
 .flaskenv
+
+# git ignore
+.gitignore
