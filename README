@@ -1,0 +1,8 @@
+To start the flask app 
+# cd ~/Workspaces/microblog
+# source .venv-microblog/bin/activate
+# flask run 
+
+
+You  may need to 
+# export FLASK_APP=microblog but this is automated by using the appropriate moduels and files.
