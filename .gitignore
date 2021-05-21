@@ -108,6 +108,7 @@ celerybeat.pid
 .env
 .venv
 .venv/
+.venv-microblog/
 env/
 venv/
 ENV/
