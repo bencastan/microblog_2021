@@ -7,5 +7,16 @@ To start the flask app
 You  may need to 
 # export FLASK_APP=microblog but this is automated by using the appropriate moduels and files.
 
+Manually adding a user to the DB::
+^C(.venv-microblog) benc@DEVil:~/Workspaces/microblog$ flask shell
+Python 3.8.6 (default, Jan 27 2021, 15:42:20) 
+[GCC 10.2.0] on linux
+App: app [production]
+Instance: /home/benc/Workspaces/microblog/instance
+>>> u = User(username='benc', email='benc@test.com')
+>>> u.set_password('test')
+>>> db.session.add(u)
+>>> db.session.commit()
+>>> exit()
 
 2021/24/05::: Completed chapter 4 and tested and all working
