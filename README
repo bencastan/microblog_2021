@@ -6,3 +6,6 @@ To start the flask app
 
 You  may need to 
 # export FLASK_APP=microblog but this is automated by using the appropriate moduels and files.
+
+
+2021/24/05::: Completed chapter 4 and tested and all working
