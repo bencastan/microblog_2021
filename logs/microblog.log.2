@@ -1,0 +1,99 @@
+2021-05-25 16:45:29,674 ERROR: Exception on /user/benc [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
+Traceback (most recent call last):
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/benc/Workspaces/microblog/app/routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/benc/Workspaces/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/benc/Workspaces/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %} {% endblock %}
+  File "/home/benc/Workspaces/microblog/app/templates/user.html", line 16, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-05-27 08:32:09,868 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-27 08:41:17,844 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-27 08:42:35,344 ERROR: Exception on /user/benc [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
+Traceback (most recent call last):
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/benc/Workspaces/microblog/app/routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/benc/Workspaces/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/benc/Workspaces/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %} {% endblock %}
+  File "/home/benc/Workspaces/microblog/app/templates/user.html", line 16, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-05-27 08:43:55,112 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-27 08:45:09,408 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-27 08:46:47,667 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-27 08:46:55,152 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-27 08:47:08,067 ERROR: Exception on /user/benc [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
+Traceback (most recent call last):
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/benc/Workspaces/microblog/app/routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/benc/Workspaces/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/benc/Workspaces/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %} {% endblock %}
+  File "/home/benc/Workspaces/microblog/app/templates/user.html", line 16, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
