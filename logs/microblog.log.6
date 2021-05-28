@@ -1,116 +1,87 @@
-2021-05-25 11:34:36,641 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 11:34:59,126 ERROR: Exception on /edit_profile [POST] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
-Traceback (most recent call last):
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
-    self.dialect.do_execute(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
-
-The above exception was the direct cause of the following exception:
-
+2021-05-25 16:33:59,216 ERROR: Exception on /user/baxter123 [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
 Traceback (most recent call last):
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1501, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1499, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1485, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/benc/Workspaces/microblog/app/routes.py", line 94, in edit_profile
-    db.session.commit()
-  File "<string>", line 2, in commit
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
-    self._transaction.commit(_to_root=self.future)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 829, in commit
-    self._prepare_impl()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
-    self.session.flush()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3262, in flush
-    self._flush(objects)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3402, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
-    raise exception
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3362, in _flush
-    flush_context.execute()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 455, in execute
-    rec.execute(self)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 629, in execute
-    util.preloaded.orm_persistence.save_obj(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 234, in save_obj
-    _emit_update_statements(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 998, in _emit_update_statements
-    c = connection._execute_20(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
-    return meth(self, args_10style, kwargs_10style, execution_options)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 329, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
-    ret = self._execute_context(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
-    self._handle_dbapi_exception(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
-    util.raise_(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
-    raise exception
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
-    self.dialect.do_execute(
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('benc', 'Grape Balls', 4)]
-(Background on this error at: http://sqlalche.me/e/14/gkpj)
-2021-05-25 11:43:47,584 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 11:43:52,819 ERROR: Exception on /edit_profile [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1497, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1838, in preprocess_request
+    rv = self.ensure_sync(func)()
+  File "/home/benc/Workspaces/microblog/app/routes.py", line 17, in before_request
+    if current_user.is_authenticated:
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/werkzeug/local.py", line 422, in __get__
+    obj = instance._get_current_object()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/werkzeug/local.py", line 544, in _get_current_object
+    return self.__local()  # type: ignore
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "/home/benc/Workspaces/microblog/app/models.py", line 66, in load_user
+    return User.query.get(int(id))
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 550, in __get__
+    mapper = orm.class_mapper(type)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/base.py", line 436, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/base.py", line 415, in _inspect_mapped_class
+    mapper._check_configure()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 1874, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 3384, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 3423, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 1891, in _post_configure_properties
+    prop.init()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/interfaces.py", line 228, in init
+    self.do_init()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/relationships.py", line 2142, in do_init
+    super(RelationshipProperty, self).do_init()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/interfaces.py", line 656, in do_init
+    self.strategy = self._get_strategy(self.strategy_key)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/interfaces.py", line 618, in _get_strategy
+    cls = self._strategy_lookup(self, *key)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/interfaces.py", line 702, in _strategy_lookup
+    raise orm_exc.LoaderStrategyException(
+sqlalchemy.orm.exc.LoaderStrategyException: Can't find strategy (('lazy', 'dynaminc'),) for User.followed
+2021-05-25 16:33:59,331 ERROR: Exception on /favicon.ico [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
 Traceback (most recent call last):
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1501, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1499, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1485, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/benc/Workspaces/microblog/app/routes.py", line 90, in edit_profile
-    form = EditProfileForm()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
-    return type.__call__(cls, *args, **kwargs)
-TypeError: __init__() missing 1 required positional argument: 'original_username'
-2021-05-25 11:43:58,609 ERROR: Exception on /edit_profile [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
-Traceback (most recent call last):
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1501, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1499, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1485, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/benc/Workspaces/microblog/app/routes.py", line 90, in edit_profile
-    form = EditProfileForm()
-  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
-    return type.__call__(cls, *args, **kwargs)
-TypeError: __init__() missing 1 required positional argument: 'original_username'
-2021-05-25 11:45:03,099 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 12:30:49,352 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 12:31:18,695 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 12:31:35,074 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 12:31:45,539 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:02:44,078 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:03:31,721 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:03:49,477 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:04:48,188 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:09:25,950 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:15:29,021 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:33:53,685 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1497, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 1838, in preprocess_request
+    rv = self.ensure_sync(func)()
+  File "/home/benc/Workspaces/microblog/app/routes.py", line 17, in before_request
+    if current_user.is_authenticated:
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/werkzeug/local.py", line 422, in __get__
+    obj = instance._get_current_object()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/werkzeug/local.py", line 544, in _get_current_object
+    return self.__local()  # type: ignore
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "/home/benc/Workspaces/microblog/app/models.py", line 66, in load_user
+    return User.query.get(int(id))
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 550, in __get__
+    mapper = orm.class_mapper(type)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/base.py", line 436, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/base.py", line 415, in _inspect_mapped_class
+    mapper._check_configure()
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 1874, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 3384, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 3419, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Can't find strategy (('lazy', 'dynaminc'),) for User.followed
+2021-05-25 16:34:27,778 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
