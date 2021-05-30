@@ -1,4 +1,4 @@
-2021-05-25 16:34:31,259 ERROR: Exception on /edit_profile [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
+2021-05-25 16:33:59,216 ERROR: Exception on /user/baxter123 [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
 Traceback (most recent call last):
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -47,7 +47,7 @@ Traceback (most recent call last):
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/interfaces.py", line 702, in _strategy_lookup
     raise orm_exc.LoaderStrategyException(
 sqlalchemy.orm.exc.LoaderStrategyException: Can't find strategy (('lazy', 'dynaminc'),) for User.followed
-2021-05-25 16:34:31,390 ERROR: Exception on /favicon.ico [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
+2021-05-25 16:33:59,331 ERROR: Exception on /favicon.ico [GET] [in /home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py:1440]
 Traceback (most recent call last):
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/flask/app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -84,5 +84,4 @@ Traceback (most recent call last):
   File "/home/benc/Workspaces/microblog/.venv-microblog/lib/python3.8/site-packages/sqlalchemy/orm/mapper.py", line 3419, in _do_configure_registries
     raise e
 sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Can't find strategy (('lazy', 'dynaminc'),) for User.followed
-2021-05-25 16:39:33,006 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
-2021-05-25 16:39:43,057 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
+2021-05-25 16:34:27,778 INFO: Microblog startup [in /home/benc/Workspaces/microblog/app/__init__.py:47]
