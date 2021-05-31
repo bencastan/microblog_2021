@@ -71,7 +71,7 @@ class User(UserMixin, db.Model):
     @staticmethod
     def verfify_reset_password_token(token):
         try:
-            id = jwt.decode(toekn, app.config['SECRET_KEY'],
+            id = jwt.decode(token, app.config['SECRET_KEY'],
             algorithms=['HS256'])['reset_password']
         except:
             return
