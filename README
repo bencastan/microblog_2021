@@ -29,3 +29,6 @@ Current users in DB
 <User Baxter>
 <User baxter123 - test>
 <User betsy - woof >
+
+
+Rememebr to change the MS.Translate endpoint to 'australiaeast' or the translate function will not work 
